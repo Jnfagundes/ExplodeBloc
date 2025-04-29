@@ -1,5 +1,39 @@
 body{
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #2e2b2b;
+    color: wheat;
 }
+#tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    grid-template-rows: repeat(12, 50px);
+    gap: 4px;
+    margin: 50px auto;
+    width: max-content;
+}
+
+.bloco {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.bloco:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.bloco.selecionado {
+    outline: 3px solid white;
+  }
+  
+  .particula {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+  }
